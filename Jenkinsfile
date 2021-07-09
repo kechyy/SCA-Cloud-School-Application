@@ -10,12 +10,14 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building'
+        sh 'javac Helloworld.java'
       }
     }
 
     stage('Deploy') {
       steps {
         echo 'Deploying'
+        sh 'java Helloworld'
       }
     }
 
